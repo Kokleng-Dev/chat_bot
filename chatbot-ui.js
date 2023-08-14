@@ -273,7 +273,8 @@ function mobileView() {
 }
 
 function detectMob() {
-    return ((window.innerHeight <= 800) && (window.innerWidth <= 600));
+    // return ((window.innerHeight <= 800) && (window.innerWidth <= 600));
+    return (window.innerWidth <= 600);
 }
 
 function chatbotTheme(theme) {
