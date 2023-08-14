@@ -263,6 +263,9 @@ function mobileView() {
 
     if (chatPopup.style.display == "none") {
         chatPopup.style.display = "flex"
+        chatPopup.style.borderRadius = "0"
+
+
             // chatInput.focus();
         chatBtn.style.display = "none"
         chatPopup.style.bottom = "0"
