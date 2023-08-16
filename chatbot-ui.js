@@ -13,6 +13,7 @@ function init() {
     //--------------------------- Chatbot Frontend -------------------------------
     const chatContainer = document.getElementById("chat-container");
 
+
     template = ` <button class='chat-btn'><img src = "./icons/comment.png" class = "icon" ></button>
 
     <div class='chat-popup'>
@@ -225,9 +226,9 @@ function setBotResponse(val) {
 
                 //check if there is image
                 if (val[i].hasOwnProperty("image")) {
-                    var BotResponse = "<div class='bot-msg'>" + "<img class='bot-img' src ='${botLogoPath}' />"
+                    var BotResponse = "<div class='bot-msg'>" + `<img class='bot-img' src ='${botLogoPath}' />` +
                     '<img class="msg-image" src="' + val[i].image + '">' +
-                        '</div>'
+                        '</div>' ;
                     $(BotResponse).appendTo('.chat-area').hide().fadeIn(1000);
                 }
 
@@ -260,7 +261,6 @@ function setBotResponse(val) {
 
 function mobileView() {
     $('.chat-popup').width($(window).width());
-
     if (chatPopup.style.display == "none") {
         chatPopup.style.display = "flex"
         chatPopup.style.borderRadius = "0"
